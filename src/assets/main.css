@@ -1,0 +1,28 @@
+@import "./base.css";
+
+@media only screen and (max-width: 767px) {
+  .prose {
+    padding: 3rem 2rem;
+    overflow-y: scroll;
+    max-height: 75vh;
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .prose {
+    padding: 4rem;
+    max-height: auto;
+    overflow: auto;
+  }
+}
+
+.prose p {
+  margin-bottom: 1.5rem;
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
+}
