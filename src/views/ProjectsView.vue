@@ -62,9 +62,9 @@ export default {
       </div>
 
     </div>
-    <!-- <RouterLink to="/projects#ecd"
+    <RouterLink to="/projects#ecd"
                 class="bottom-0 decoration-orange-500 hover:text-white hover:bg-purple-400 absolute text-white mb-4 ml-auto mr-0 block md:left-10 font-bold">
-      Next Project</RouterLink> -->
+      Next Project</RouterLink>
   </section>
 
   <section class="min-h-screen font-roboto flex flex-col px-8 py-24 items-start justify-center" id="ecd"
@@ -90,7 +90,7 @@ export default {
     </div>
   </section> 
 
-  <section class="py-8 bg-gray-500 text-white text-center text-2xl">
+  <section class="py-8 bg-gray-500 text-white text-center text-lg md:text-2xl">
     That's it for now! More coming soon, check the <a
            class="decoration-orange-500 underline hover:text-white hover:bg-purple-400" href="https://github.com/M-Drummond">Github</a> page for updates as they happen.
   </section>
