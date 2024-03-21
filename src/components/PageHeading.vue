@@ -25,7 +25,7 @@ export default {
         
         <div class="absolute bottom-0 left-0 z-0 flex flex-col pl-8 pb-8 md:pb-8">
             <transition name="fade" mode="out-in">
-                <p v-show="route.path !== '/' ? '' : 'hidden' " class="text-sm lg:text-3xl">Personal Website of Mackinley Drummond</p>
+                <p v-show="route.path !== '/' ? '' : 'hidden' " class="text-sm lg:text-3xl">Mackinley Drummond</p>
             </transition>
             <transition name="fade" mode="out-in">
                 <p v-show="route.path !== '/' ? '' : 'hidden' " class="text-xs lg:text-2xl">Web Developer</p>

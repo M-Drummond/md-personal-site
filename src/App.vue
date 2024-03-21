@@ -25,7 +25,7 @@ const frameClasses = computed(() => {
 </script>
 
 <template>
-  <div id="frame" class="min-h-[101vh] delay-500 duration-300 transition-colors " :class="frameClasses">
+  <div id="frame" class="min-h-[101vh] delay-200 duration-300 transition-colors " :class="frameClasses">
 
     <header>
       <div class="wrapper h-full w-full">
