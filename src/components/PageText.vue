@@ -1,5 +1,5 @@
 <template>
-    <div class="prose xl:prose-xl mr-0 ml-auto">
+    <div class="prose xl:prose-xl mr-0 ml-auto" v-cloak>
         <div v-html="content">
 
         </div>

@@ -13,7 +13,7 @@ const route = useRoute()
 const frameClasses = computed(() => {
 
   if (route.path == '/') {
-    return 'bg-yellow-50'
+    return 'bg-red-50'
   } else if (route.path == '/projects') {
     return 'bg-blue-50'
   } else if (route.path == '/about') {
@@ -36,7 +36,7 @@ const frameClasses = computed(() => {
 
     <Bio />
 
-    <RouterView v-slot="{ Component }">
+    <RouterView v-slot="{ Component }" class="">
       <transition appear :name="route.meta.transition">
 
         <component :is="Component" />
