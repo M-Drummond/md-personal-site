@@ -14,17 +14,20 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "Welcome",
       component: HomeView,
+      meta: { transition: 'fade' } 
     },
     {
       path: "/about",
       name: "about",
       component: () => import("../views/AboutView.vue"),
+      meta: { transition: 'fade' }
     },    {
       path: "/projects",
       name: "projects",
       component: () => import("../views/ProjectsView.vue"),
+      meta: { transition: 'fade' }
     },
   ],
 });

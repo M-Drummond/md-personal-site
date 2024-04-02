@@ -1,4 +1,6 @@
 <script setup lang="ts">
+
+import PageText from '@/components/PageText.vue'
 import PageHeading from '@/components/PageHeading.vue';
 </script>
 
@@ -16,5 +18,7 @@ export default {
 
 
 <template>
-  <PageHeading :title="pageHeading" />
+
+
+
 </template>

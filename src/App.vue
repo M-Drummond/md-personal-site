@@ -2,7 +2,7 @@
 import { watch, computed, ref, defineComponent } from 'vue'
 import { RouterLink, RouterView, useRoute } from "vue-router";
 import PageHeading from "./components/PageHeading.vue";
-import Nav from "./components/Nav.vue"
+import MainNav from "./components/MainNav.vue"
 import Bio from "./components/Bio.vue"
 
 import { globalState } from "./stores/global";
@@ -25,19 +25,26 @@ const frameClasses = computed(() => {
 </script>
 
 <template>
-  <div id="frame" class="min-h-[101vh] delay-200 duration-300 transition-colors " :class="frameClasses">
+  <div id="frame" class="min-h-[100.1vh] delay-200 duration-300 overflow-x-hidden max-w-screen transition-colors"
+    :class="frameClasses">
 
     <header>
       <div class="wrapper h-full w-full">
-        <Nav />
+        <MainNav />
       </div>
     </header>
 
     <Bio />
 
+    <RouterView v-slot="{ Component }">
+      <transition appear :name="route.meta.transition">
 
-    <RouterView />
+        <component :is="Component" />
+      </transition>
 
+    </RouterView>
+
+    <PageHeading :title="route.name" />
 
   </div>
 </template>
