@@ -113,3 +113,12 @@ p a {
 .slide-right-leave-to {
   transform: translateX(100%);
 }
+
+:root {
+  --slider-connect-bg: #000;
+  --slider-tooltip-bg: #000;
+  --slider-handle-ring-color: #000;
+  --slider-handle-ring-color: #000;
+  --slider-handle-bg: #000;
+  --slider-handle-radius: 8px;
+}
