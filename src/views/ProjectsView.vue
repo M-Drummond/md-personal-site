@@ -85,8 +85,8 @@ export function newGradient() {
       :style="{ background: 'linear-gradient(' + rotation + 'deg, ' + colour1 + ' 27%, ' + colour2 + ' 55%, ' + colour3 + ' 100%)' }">
 
       <div
-        class="flex flex-col items-center justify-center w-full bg-white border border-8 border-black md:flex-row shadow-base">
-        <div class="w-full prose text-black border-r-8 border-black ">
+        class="flex flex-col-reverse items-center justify-center w-full px-4 bg-white border border-8 border-black md:px-0 md:flex-row shadow-base">
+        <div class="w-full prose text-black border-black md:order-r-8 ">
           <h2 class="text-3xl uppercase">Gradient generator</h2>
           <p>A Vue-powered gradient generator. A Single Page App that uses TypeScript and Pinia under the hood.</p>
           <!-- <p>Allow</p> -->
@@ -115,10 +115,10 @@ export function newGradient() {
 
           </div>
 
-          <p class="flex flex-row items-center text-sm text-center md:text-base justify-normal">
-            <a class="inline-block p-4 mt-8 no-underline mr-4 rounded-[8px] active:translate-y-[1px] uppercase shadow-button bg-white border border-black font-black  hover:text-white hover:bg-black"
-              href="https://gradient-md.netlify.app/">View The Site</a>
-            <a class="inline-block p-4 mt-8 no-underline  rounded-[8px] active:translate-y-[1px] uppercase shadow-button bg-white border border-black font-black hover:text-white hover:bg-black"
+          <p class="flex flex-col items-center text-sm text-center md:flex-row md:text-base justify-normal">
+            <a class="inline-block p-4 mt-8 w-[85%] no-underline md:mr-4 rounded-[8px] active:translate-y-[1px] uppercase shadow-button bg-white border border-black font-black  hover:text-white hover:bg-black"
+              href="https://gradient-md.netlify.app/">Use It Here</a>
+            <a class="inline-block p-4 mt-8 no-underline w-[85%] rounded-[8px] active:translate-y-[1px] uppercase shadow-button bg-white border border-black font-black hover:text-white hover:bg-black"
               href="https://github.com/M-Drummond/gradients">View On github</a>
           </p>
         </div>
