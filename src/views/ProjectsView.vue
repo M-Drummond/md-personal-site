@@ -2,12 +2,36 @@
 
 import { ref, computed, onMounted, onUnmounted } from "vue";
 
+import router from "@/router";
 
 import PageHeading from '@/components/PageHeading.vue';
 import PageText from '@/components/PageText.vue'
 
 
 import Slider from '@vueform/slider'
+import { useIntersectionObserver } from '@vueuse/core'
+
+const target1 = ref([])
+const targetIsVisible = ref(false)
+
+const { stop } = useIntersectionObserver(
+  target1,
+  ([{ isIntersecting }], observerElement) => {
+    targetIsVisible.value = isIntersecting
+    console.log(target.value)
+    const sectionId = target.value.id
+
+    console.log(sectionId)
+
+
+    router.push('/projects#' + sectionId)
+
+    // route.push({ name: this.$route.name, hash: `#${sectionId}` })
+
+  },
+)
+
+
 
 </script>
 
@@ -53,6 +77,9 @@ export function newGradient() {
   rotation.value = Math.round(Math.random() * 270)
 }
 
+
+
+
 </script>
 
 
@@ -61,7 +88,7 @@ export function newGradient() {
 
   <PageText :content="projects" />
 
-  <p class="text-lg md:text-2xl   right-8 px-8 md:px-0 md:max-w-[600px] ml-auto mr-0">There's
+  <p class="text-lg md:text-2xl right-8 px-8 md:px-0 md:max-w-[600px] ml-auto mr-0">There's
     still some
     fun stuff
     to show off
@@ -75,19 +102,19 @@ export function newGradient() {
     <RouterLink to="/projects#gradients" class="bottom-0 absolute px-8 text-[#374151] md:left-10 font-bold">(Scroll
       Down!)</RouterLink>
   </transition>
-  <div class="min-h-[20vh] mt-[70vh]"><!-- spacer div, call the cops.--></div>
+  <div class="min-h-[20vh] mt-[70vh]" id="0"><!-- spacer div, call the cops.--></div>
   <div ref="root">
 
 
 
     <section class="flex flex-col items-start justify-center min-h-screen px-8 py-24 font-black font-archivo"
-      id="gradients"
+      ref="target1" id="gradients"
       :style="{ background: 'linear-gradient(' + rotation + 'deg, ' + colour1 + ' 27%, ' + colour2 + ' 55%, ' + colour3 + ' 100%)' }">
 
       <div
-        class="flex flex-col-reverse items-center justify-center w-full px-4 bg-white border border-8 border-black md:px-0 md:flex-row shadow-base">
+        class="flex flex-col-reverse items-center justify-center w-full px-4 mx-auto bg-white border border-8 border-black xl:max-w-screen-xl md:px-0 md:flex-row shadow-base">
         <div class="w-full prose text-black border-black md:order-r-8 ">
-          <h2 class="text-3xl uppercase">Gradient generator</h2>
+          <h2 class="text-3xl tracking-widest uppercase">Gradient generator</h2>
           <p>A Vue-powered gradient generator. A Single Page App that uses TypeScript and Pinia under the hood.</p>
           <!-- <p>Allow</p> -->
 
@@ -133,7 +160,8 @@ export function newGradient() {
     </section>
 
 
-    <section class="relative flex flex-col items-start justify-center min-h-screen px-8 py-24 font-mono bg-yellow-50"
+    <section ref="target"
+      class="relative flex flex-col items-start justify-center min-h-screen px-8 py-24 font-mono bg-yellow-50"
       id="megabits">
 
       <div class="flex flex-col items-center justify-center w-full md:flex-row">
@@ -161,14 +189,14 @@ export function newGradient() {
         Next Project</RouterLink>
     </section>
 
-    <section class="flex flex-col items-start justify-center min-h-screen px-8 py-24 font-roboto" id="ecd"
+    <section ref="target" class="flex flex-col items-start justify-center min-h-screen px-8 py-24 font-roboto" id="ecd"
       style="background-color: rgb(44, 82, 130) ;">
 
       <div class="flex flex-col items-center justify-center w-full md:flex-row-reverse">
         <div class="w-full prose text-white roboto-slab-500">
           <h2 class="text-3xl font-bold font-black text-white uppercase">ECD Inflatables</h2>
           <p>A super-slim "business card" style website, for my father's small business.</p>
-          <p>Completely over-kill with NuxtJS and a Github/Netlify build setup.</p>
+          <p>Completely over-kill with NuxtJS and a Nuxt Framework and Github/Netlify build setup.</p>
           <p>
             <a class="inline-block p-4 mt-8 text-blue-900 no-underline uppercase bg-white border border-white border-solid hover:underline"
               href="https://ecdinflatables.com/">View The Site</a>
