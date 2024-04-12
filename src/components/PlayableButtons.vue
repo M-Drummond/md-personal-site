@@ -25,7 +25,7 @@ const playSound = (id) => {
 </script>
 
 <template>
-    <div class="flex items-center justify-center gap-4 py-4 md:justify-start">
+    <div class="items-center justify-center hidden gap-4 py-4 md:flex md:justify-start">
         <span class="hidden md:block">Sounds Like: </span>
         <button @click="playSound('kick')" label="Kick">1</button>
         <button @click="playSound('hihat')" label="Hi-hat">2</button>

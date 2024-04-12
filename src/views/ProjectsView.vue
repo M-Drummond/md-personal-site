@@ -278,7 +278,7 @@ export function newGradient() {
       <section class=" border-y-orange-400 border-y-8 font-manrope bg-slate-800" ref="platemath" id="platemath">
         <div class="flex flex-col items-start justify-center border-teal-700 border-y-8 px-8 py-24  min-h-[80vh]">
           <div
-            class="flex flex-col-reverse items-center justify-center w-full px-4 mx-auto border border-orange-400 border-1 xl:max-w-screen-xl md:px-0 md:flex-row ">
+            class="flex flex-col-reverse items-center justify-center w-full px-4 mx-auto xl:max-w-screen-xl md:px-0 md:flex-row ">
             <div class="w-full prose text-orange-400 border-black md:order-r-8 ">
               <h2 class="text-3xl uppercase text-inherit">Plate Math</h2>
               <p>Barbell calculator, programmed in <span class="px-1 text-black bg-orange-400">Vue</span></p>
@@ -300,7 +300,7 @@ export function newGradient() {
 
             <div class="w-full h-auto overflow-hidden prose max-h-none">
               <img src="/platemath.png" alt="screenshot of platemath site"
-                class="px-2 mx-auto border border-black border-solid shadow-base" />
+                class="px-2 mx-auto border border-orange-500 border-solid shadow-base" />
             </div>
 
           </div>
