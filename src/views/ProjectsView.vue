@@ -8,11 +8,13 @@ import PageHeading from '@/components/PageHeading.vue';
 import PageText from '@/components/PageText.vue'
 
 import GradientGenerator from '@/components/projects/GradientGenerator.vue'
+import Megabits from '@/components/projects/Megabits.vue'
+import BeatMachine from '@/components/projects/BeatMachine.vue'
 
-import playableButtons from '@/components/PlayableButtons.vue'
+import PlateMath from '@/components/projects/PlateMath.vue'
 
-import { useIntersectionObserver } from '@vueuse/core'
-import { useSound } from '@vueuse/sound'
+import ECD from '@/components/projects/ECD.vue'
+
 
 const targetIsVisible = ref(false)
 
@@ -101,127 +103,13 @@ const projects = `<p class="px-8 text-lg md:text-2xl">Recent focus on agency wor
 
 
       <GradientGenerator />
+      <BeatMachine />
+      <Megabits />
 
-      <section
-        class="flex flex-col items-start justify-center min-h-screen px-8 py-24   border-y-8 border-black bg-[#555] "
-        ref="beatmachine" id="beatmachine">
-        <div
-          class="flex flex-col-reverse items-center justify-center w-full px-4 mx-auto border border-orange-500 border-1 xl:max-w-screen-xl md:px-0 md:flex-row ">
-          <div class="w-full prose text-orange-500 border-black md:order-r-8 ">
-            <h2 class="text-3xl uppercase text-inherit">BEATS MACHINE</h2>
-            <p>Built with <span class="px-1 text-black bg-orange-500">Vue</span>, a playable step sequencer.</p>
-            <p>Makes beats, and makes noise.</p>
+      <ECD />
 
 
-            <p
-              class="flex flex-col items-center space-y-4 text-sm text-center md:space-y-0 md:flex-row md:text-base md:space-x-4 justify-normal">
-              <a class="w-full p-4 text-orange-500 no-underline border border-orange-500 hover:bg-black hover:underline font-boldd"
-                href="https://beatsmachine.netlify.app/">Play
-                Now</a>
-              <a class="w-full p-4 text-orange-500 no-underline border border-orange-500 hover:bg-black hover:underline font-boldd"
-                href="https://github.com/M-Drummond/beatmachine">View On github</a>
-            </p>
-
-            <playableButtons />
-
-          </div>
-
-
-          <div class="w-full h-auto overflow-hidden prose max-h-none">
-            <img src="/beats.png" alt="screenshot of beatsmachine site"
-              class="block px-2 mx-auto border border-black border-solid shadow-base " />
-          </div>
-
-        </div>
-      </section>
-
-
-
-      <section ref="megabits"
-        class="relative flex flex-col items-start justify-center min-h-screen px-8 py-24 font-mono bg-yellow-50"
-        id="megabits">
-
-        <div
-          class="flex flex-col items-center justify-center w-full border-4 border-current border-double md:py-24 md:flex-row">
-          <div class="w-full prose text-black flex-0 ">
-            <h2 class="text-3xl font-bold text-black">Megabits Calculator</h2>
-            <p>This is a <span class="px-1 text-white bg-black">react</span> app to convert megabits to, and from,
-              megabytes.</p>
-            <p>I made this because download managers sometimes don't do this.</p>
-            <p class="flex flex-row items-center text-center justify-normal">
-              <a class="inline-block p-4 mt-8 text-black no-underline border border-black border-solid hover:underline"
-                href="https://megabits.netlify.app/">Use it Here</a>
-              <a class="inline-block p-4 mt-8 ml-4 text-black no-underline border border-black border-solid bg-yellow-50 hover:underline"
-                href="https://github.com/M-Drummond/Megabites-Megabytes">View On GitHub</a>
-            </p>
-          </div>
-
-
-          <div class="w-full border-black border-solid shadow-base md:w-1/4">
-            <img src="/megabits.png" class="block w-full h-full max-w-full" width="100" height="100"
-              alt="screenshot of megabits app" />
-          </div>
-
-        </div>
-      </section>
-
-      <section ref="ecd" class="flex flex-col items-start justify-center min-h-screen px-8 py-24 font-roboto" id="ecd"
-        style="background-color: rgb(44, 82, 130) ;">
-
-        <div class="flex flex-col items-center justify-center w-full md:flex-row-reverse">
-          <div class="w-full prose text-white roboto-slab-500">
-            <h2 class="text-3xl font-bold font-black text-white uppercase">ECD Inflatables</h2>
-            <p>A super-slim "business card" style website, for my father's small business.</p>
-            <p>Completely over-kill with <span class="px-1 text-white bg-black">NuxtJS</span> and a
-              <span class="px-1 text-white bg-black">Github/Netlify</span> build setup.
-            </p>
-            <p>
-              <a class="inline-block p-4 mt-8 text-blue-900 no-underline uppercase bg-white border border-white border-solid hover:underline"
-                href="https://ecdinflatables.com/">View The Site</a>
-
-            </p>
-          </div>
-
-
-          <div class="w-full h-auto overflow-hidden prose bg-white border-black border-solid max-h-none shadow-base">
-            <img src="/ecd.png" alt="screenshot of ecd site" class="mx-auto " />
-          </div>
-
-        </div>
-      </section>
-
-
-      <section class=" border-y-orange-400 border-y-8 font-manrope bg-slate-800" ref="platemath" id="platemath">
-        <div class="flex flex-col items-start justify-center border-teal-700 border-y-8 px-8 py-24  min-h-[80vh]">
-          <div
-            class="flex flex-col-reverse items-center justify-center w-full px-4 mx-auto xl:max-w-screen-xl md:px-0 md:flex-row ">
-            <div class="w-full prose text-orange-400 border-black md:order-r-8 ">
-              <h2 class="text-3xl uppercase text-inherit">Plate Math</h2>
-              <p>Barbell calculator, programmed in <span class="px-1 text-black bg-orange-400">Vue</span></p>
-              <p>Adding 20 and 20 is now a little easier. Designed for phone use, it includes a dark theme and a
-                left/right handed switch. </p>
-
-
-              <p
-                class="flex flex-col items-center space-y-4 text-sm text-center md:flex-row md:text-base md:space-x-4 md:space-y-0 justify-normal">
-                <a class="w-full p-4 font-bold text-teal-700 no-underline bg-orange-400 border border-orange-400 hover:text-orange-400 hover:bg-teal-700 hover:underline font-boldd"
-                  href="https://beatsmachine.netlify.app/">Use it Here</a>
-                <a class="w-full p-4 font-bold text-orange-400 no-underline border border-white hover:bg-black hover:underline font-boldd"
-                  href="https://github.com/M-Drummond/beatmachine">View On github</a>
-              </p>
-
-
-            </div>
-
-
-            <div class="w-full h-auto overflow-hidden prose max-h-none">
-              <img src="/platemath.png" alt="screenshot of platemath site"
-                class="px-2 mx-auto border border-orange-500 border-solid shadow-base" />
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <PlateMath />
 
 
       <section
