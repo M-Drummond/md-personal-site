@@ -80,7 +80,7 @@ const projects = `<p class="px-8 text-lg md:text-2xl">Recent focus on agency wor
 
 <template>
 
-  <div>
+  <div class="w-full overflow-x-hidden select-none">
 
     <PageText :content="projects" />
 
