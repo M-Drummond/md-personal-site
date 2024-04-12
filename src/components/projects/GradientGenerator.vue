@@ -58,11 +58,9 @@ export function newGradient() {
                     that
                     uses TypeScript and Pinia under the hood.</p>
                 <p>Try It Out: </p>
-                <!-- <p>Allow</p> -->
 
                 <div class="flex flex-row items-center p-8 bg-white border shadow-button">
 
-                    <!-- <span class="inline-block mb-4">Try it Out:</span> -->
 
                     <div class="w-full">
 
@@ -95,7 +93,7 @@ export function newGradient() {
 
             <div class="w-full h-auto overflow-hidden prose max-h-none">
                 <img src="/gradient-gen.png" alt="screenshot of gradient generator site"
-                    class="mx-auto border-black border-solid bborder shadow-button" />
+                    class="mx-auto border border-black border-solid shadow-button" />
             </div>
 
         </div>

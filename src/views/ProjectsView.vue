@@ -105,10 +105,7 @@ const projects = `<p class="px-8 text-lg md:text-2xl">Recent focus on agency wor
       <GradientGenerator />
       <BeatMachine />
       <Megabits />
-
       <ECD />
-
-
       <PlateMath />
 
 
@@ -188,13 +185,5 @@ const projects = `<p class="px-8 text-lg md:text-2xl">Recent focus on agency wor
 .font-manrope {
   font-family: "Manrope", sans-serif;
 
-}
-
-.shadow-button {
-  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.85);
-}
-
-.shadow-base {
-  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
 }
 </style>

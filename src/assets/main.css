@@ -122,3 +122,11 @@ p a {
   --slider-handle-bg: #000;
   --slider-handle-radius: 8px;
 }
+
+.shadow-button {
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.85);
+}
+
+.shadow-base {
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+}
