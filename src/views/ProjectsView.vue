@@ -7,9 +7,11 @@ import router from "@/router";
 import PageHeading from '@/components/PageHeading.vue';
 import PageText from '@/components/PageText.vue'
 
+import playableButtons from '@/components/PlayableButtons.vue'
 
 import Slider from '@vueform/slider'
 import { useIntersectionObserver } from '@vueuse/core'
+import { useSound } from '@vueuse/sound'
 
 const targetIsVisible = ref(false)
 
@@ -101,8 +103,6 @@ export function newGradient() {
 }
 
 
-
-
 </script>
 
 
@@ -176,12 +176,46 @@ export function newGradient() {
 
 
         <div class="w-full h-auto overflow-hidden prose max-h-none">
-          <img src="/gradient-gen.png" alt="screenshot of ecd site"
+          <img src="/gradient-gen.png" alt="screenshot of gradient generator site"
             class="mx-auto border border-blue-800 border-solid" />
         </div>
 
       </div>
     </section>
+
+    <section
+      class="flex flex-col items-start justify-center min-h-[50vh] px-8 py-24   border-y-8 border-black bg-[#555] "
+      ref="beatmachine" id="beatmachine">
+      <div
+        class="flex flex-col-reverse items-center justify-center w-full px-4 mx-auto border border-orange-500 border-1 xl:max-w-screen-xl md:px-0 md:flex-row ">
+        <div class="w-full prose text-orange-500 border-black md:order-r-8 ">
+          <h2 class="text-3xl uppercase text-inherit">BEATS MACHINE</h2>
+          <p>Built with <span class="px-1 text-black bg-orange-500">Vue</span>, a playable step sequencer.</p>
+          <p>Makes beats, and makes noise.</p>
+
+
+          <p
+            class="flex flex-col items-center space-y-4 text-sm text-center md:space-y-0 md:flex-row md:text-base md:space-x-4 justify-normal">
+            <a class="w-full p-4 text-orange-500 no-underline border border-orange-500 hover:bg-black hover:underline font-boldd"
+              href="https://beatsmachine.netlify.app/">Play
+              Now</a>
+            <a class="w-full p-4 text-orange-500 no-underline border border-orange-500 hover:bg-black hover:underline font-boldd"
+              href="https://github.com/M-Drummond/beatmachine">View On github</a>
+          </p>
+
+          <playableButtons />
+
+        </div>
+
+
+        <div class="w-full h-auto overflow-hidden prose max-h-none">
+          <img src="/beats.png" alt="screenshot of beatsmachine site"
+            class="px-2 mx-auto border border-orange-500 border-solid" />
+        </div>
+
+      </div>
+    </section>
+
 
 
     <section ref="megabits"
@@ -209,9 +243,6 @@ export function newGradient() {
         </div>
 
       </div>
-      <RouterLink to="/projects#ecd"
-        class="absolute bottom-0 block mb-4 ml-auto mr-0 font-bold text-white decoration-orange-500 hover:text-white hover:bg-purple-400 md:left-10">
-        Next Project</RouterLink>
     </section>
 
     <section ref="ecd" class="flex flex-col items-start justify-center min-h-screen px-8 py-24 font-roboto" id="ecd"
@@ -240,7 +271,39 @@ export function newGradient() {
     </section>
 
 
-    <section class="py-8 text-lg text-center text-white bg-gray-500 md:text-2xl">
+    <section class=" border-y-orange-400 border-y-8 font-manrope bg-slate-800" ref="platemath" id="platemath">
+      <div class="flex flex-col items-start justify-center border-teal-700 border-y-8 px-8 py-24  min-h-[80vh]">
+        <div
+          class="flex flex-col-reverse items-center justify-center w-full px-4 mx-auto border border-orange-400 border-1 xl:max-w-screen-xl md:px-0 md:flex-row ">
+          <div class="w-full prose text-orange-400 border-black md:order-r-8 ">
+            <h2 class="text-3xl uppercase text-inherit">Plate Math</h2>
+            <p>Barbell calculator, programmed in <span class="px-1 text-black bg-orange-400">Vue</span></p>
+            <p>Adding 20 and 20 is now a little easier.</p>
+
+
+            <p
+              class="flex flex-col items-center space-y-4 text-sm text-center md:flex-row md:text-base md:space-x-4 md:space-y-0 justify-normal">
+              <a class="w-full p-4 font-bold text-teal-700 no-underline bg-orange-400 border border-orange-400 hover:text-orange-400 hover:bg-teal-700 hover:underline font-boldd"
+                href="https://beatsmachine.netlify.app/">Use it Here</a>
+              <a class="w-full p-4 font-bold text-orange-400 no-underline border border-white hover:bg-black hover:underline font-boldd"
+                href="https://github.com/M-Drummond/beatmachine">View On github</a>
+            </p>
+
+
+          </div>
+
+
+          <div class="w-full h-auto overflow-hidden prose max-h-none ]">
+            <img src="/platemath.png" alt="screenshot of platemath site"
+              class="px-2 mx-auto border border-orange-500 border-solid" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="py-8 text-lg text-center md:text-2xl">
       That's it for now! More coming soon, check the <a
         class="underline decoration-orange-500 hover:text-white hover:bg-purple-400"
         href="https://github.com/M-Drummond">Github</a> page for updates as they happen.
@@ -252,6 +315,8 @@ export function newGradient() {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap');
 
 @media only screen and (max-width: 767px) {
   .prose {
@@ -290,6 +355,10 @@ export function newGradient() {
   font-family: "Archivo", sans-serif;
 }
 
+.font-manrope {
+  font-family: "Manrope", sans-serif;
+
+}
 
 .shadow-button {
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.85);
