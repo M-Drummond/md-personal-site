@@ -7,7 +7,7 @@ import Slider from '@vueform/slider'
 
 <script lang="ts">
 
-const rotation = ref(0)
+export const rotation = ref(0)
 
 const presetColours = [
     '#b3ff80',
@@ -28,9 +28,9 @@ export function getRandColour() {
     return presetColours[Math.round(Math.random() * 10)].toString()
 }
 
-var colour1 = ref(getRandColour())
-var colour2 = ref(getRandColour())
-var colour3 = ref(getRandColour())
+export var colour1 = ref(getRandColour())
+export var colour2 = ref(getRandColour())
+export var colour3 = ref(getRandColour())
 
 export function newGradient() {
     console.log('newGradient ')

@@ -8,13 +8,15 @@ import PageHeading from '@/components/PageHeading.vue';
 import PageText from '@/components/PageText.vue'
 
 import GradientGenerator from '@/components/projects/GradientGenerator.vue'
+
+import { colour1, colour2, colour3, rotation, getRandColour, newGradient } from '@/components/projects/GradientGenerator.vue'
+
 import Megabits from '@/components/projects/Megabits.vue'
 import BeatMachine from '@/components/projects/BeatMachine.vue'
 
 import PlateMath from '@/components/projects/PlateMath.vue'
 
 import ECD from '@/components/projects/ECD.vue'
-
 
 const targetIsVisible = ref(false)
 
@@ -73,7 +75,6 @@ const projects = `<p class="px-8 text-lg md:text-2xl">Recent focus on agency wor
 
 
 
-
 </script>
 
 
@@ -116,7 +117,7 @@ const projects = `<p class="px-8 text-lg md:text-2xl">Recent focus on agency wor
         </div>
         <div class="">
           <p class="relative z-40">
-            That's it for now! More coming soon, check the <a
+            That's it for now! More coming soon, check my <a
               class="underline decoration-orange-500 hover:text-white hover:bg-purple-400"
               href="https://github.com/M-Drummond">Github</a> page for updates as they happen.
           </p>
