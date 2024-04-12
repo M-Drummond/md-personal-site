@@ -100,4 +100,8 @@ export function newGradient() {
     </section>
 
 </template>
-<style scoped></style>
+<style scoped>
+.font-archivo {
+    font-family: "Archivo", sans-serif;
+}
+</style>

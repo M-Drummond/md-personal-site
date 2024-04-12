@@ -33,4 +33,11 @@
     </section>
 
 </template>
-<style scoped></style>
+<style scoped>
+.roboto-slab-500 {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+}
+</style>

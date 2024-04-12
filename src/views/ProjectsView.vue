@@ -140,12 +140,14 @@ const projects = `<p class="px-8 text-lg md:text-2xl">Recent focus on agency wor
 
 </template>
 
-<style scoped>
+<style>
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&display=swap');
+</style>
 
+<style scoped>
 @media only screen and (max-width: 767px) {
   .prose {
     padding: 3rem 0rem;
@@ -166,22 +168,6 @@ const projects = `<p class="px-8 text-lg md:text-2xl">Recent focus on agency wor
   margin-bottom: 1.5rem;
 }
 
-.roboto-slab-500 {
-  font-family: "Roboto Slab", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-
-}
-
-.roboto-slab-900 {
-  font-family: "Roboto Slab Black", serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-}
-
-.font-archivo {
-  font-family: "Archivo", sans-serif;
-}
 
 .font-manrope {
   font-family: "Manrope", sans-serif;

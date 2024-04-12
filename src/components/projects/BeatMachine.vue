@@ -27,7 +27,7 @@ import { useSound } from '@vueuse/sound'
                         href="https://beatsmachine.netlify.app/">Play
                         Now</a>
                     <a class="w-full p-4 text-orange-500 no-underline border border-orange-500 hover:bg-black hover:underline font-boldd"
-                        href="https://github.com/M-Drummond/beatmachine">View On github</a>
+                        href="https://github.com/M-Drummond/beatmachine/tree/main/src">View On github</a>
                 </p>
 
                 <playableButtons />
