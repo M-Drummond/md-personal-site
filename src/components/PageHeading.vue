@@ -25,7 +25,7 @@ export default {
   props: {
     title: {
       type: String,
-      required: true,
+      required: false,
     },
   },
 };
@@ -39,9 +39,9 @@ export default {
 <template>
 
 
-  <div class="absolute overflow-hidden bottom-0 left-0 z-0 flex flex-col pl-8 pb-8 md:pb-8">
+  <div class="absolute bottom-0 left-0 z-0 flex flex-col pb-8 pl-8 overflow-hidden md:pb-8">
 
-    <div class="  w-full">
+    <div class="w-full ">
 
       <transition name="slide-up" v-cloak v-show="route.path !== '/' ? '' : 'opacity-0'">
         <p class="text-sm lg:text-3xl">Mackinley Drummond</p>

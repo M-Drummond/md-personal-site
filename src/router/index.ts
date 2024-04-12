@@ -3,7 +3,7 @@ import HomeView from "../views/HomeView.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  scrollBehavior(to, from, savedPosition) {
+  // scrollBehavior(to, from, savedPosition) {
     // console.log( to )
     // if (to.hash && to.path === '/projects')  {
       // return {
@@ -11,7 +11,7 @@ const router = createRouter({
         // behavior: 'smooth',
       // }
     // }
-  },
+  // },
   routes: [
     {
       path: "/",
@@ -28,7 +28,7 @@ const router = createRouter({
       path: "/projects",
       name: "projects",
       component: () => import("../views/ProjectsView.vue"),
-      meta: { transition: 'fade' }
+      // meta: { transition: 'fade' }
     },
   ],
 });
