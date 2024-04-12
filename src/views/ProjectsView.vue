@@ -11,25 +11,48 @@ import PageText from '@/components/PageText.vue'
 import Slider from '@vueform/slider'
 import { useIntersectionObserver } from '@vueuse/core'
 
-const target1 = ref([])
 const targetIsVisible = ref(false)
 
-const { stop } = useIntersectionObserver(
-  target1,
-  ([{ isIntersecting }], observerElement) => {
-    targetIsVisible.value = isIntersecting
-    console.log(target.value)
-    const sectionId = target.value.id
+onMounted(() => {
 
-    console.log(sectionId)
+  // Get all <section> elements
+  const sections = document.querySelectorAll("section");
+
+  const offset = "40px"; // You can adjust this value according to your needs
 
 
-    router.push('/projects#' + sectionId)
+  // Loop through each <section> element
+  sections.forEach(section => {
+    // Create an IntersectionObserver for each section
+    const observer = new IntersectionObserver(([entry]) => {
 
-    // route.push({ name: this.$route.name, hash: `#${sectionId}` })
 
-  },
-)
+
+      if (entry.isIntersecting) {
+        // If the section is intersecting with the viewport, do your logic here
+        targetIsVisible.value = true;
+        const sectionId = section.id;
+        router.replace('/projects#' + sectionId);
+      } else {
+        targetIsVisible.value = false;
+        router.replace('/projects')
+      }
+
+    }, {
+      rootMargin: offset
+    });
+
+    // Start observing the section
+    observer.observe(section);
+  });
+
+  if (router.currentRoute.hash) {
+    document.getElementById(router.to.has)?.scrollIntoView();
+
+  }
+
+
+});
 
 
 
@@ -108,14 +131,15 @@ export function newGradient() {
 
 
     <section class="flex flex-col items-start justify-center min-h-screen px-8 py-24 font-black font-archivo"
-      ref="target1" id="gradients"
+      ref="gradients" id="gradients"
       :style="{ background: 'linear-gradient(' + rotation + 'deg, ' + colour1 + ' 27%, ' + colour2 + ' 55%, ' + colour3 + ' 100%)' }">
 
       <div
         class="flex flex-col-reverse items-center justify-center w-full px-4 mx-auto bg-white border border-8 border-black xl:max-w-screen-xl md:px-0 md:flex-row shadow-base">
         <div class="w-full prose text-black border-black md:order-r-8 ">
           <h2 class="text-3xl tracking-widest uppercase">Gradient generator</h2>
-          <p>A Vue-powered gradient generator. A Single Page App that uses TypeScript and Pinia under the hood.</p>
+          <p>A <span class="px-1 text-white bg-black">Vue</span> powered gradient generator. A Single Page App that
+            uses TypeScript and Pinia under the hood.</p>
           <!-- <p>Allow</p> -->
 
           <div class="flex flex-row items-center p-8 bg-white border shadow-button">
@@ -160,14 +184,15 @@ export function newGradient() {
     </section>
 
 
-    <section ref="target"
+    <section ref="megabits"
       class="relative flex flex-col items-start justify-center min-h-screen px-8 py-24 font-mono bg-yellow-50"
       id="megabits">
 
       <div class="flex flex-col items-center justify-center w-full md:flex-row">
         <div class="w-full prose text-black flex-0 ">
           <h2 class="text-3xl font-bold text-black">Megabits Calculator</h2>
-          <p>This is a react app to convert megabits to, and from, megabytes.</p>
+          <p>This is a <span class="px-1 text-white bg-black">react</span> app to convert megabits to, and from,
+            megabytes.</p>
           <p>I made this because download managers sometimes don't do this.</p>
           <p class="flex flex-row items-center text-center justify-normal">
             <a class="inline-block p-4 mt-8 text-black no-underline border border-black border-solid hover:underline"
@@ -189,14 +214,16 @@ export function newGradient() {
         Next Project</RouterLink>
     </section>
 
-    <section ref="target" class="flex flex-col items-start justify-center min-h-screen px-8 py-24 font-roboto" id="ecd"
+    <section ref="ecd" class="flex flex-col items-start justify-center min-h-screen px-8 py-24 font-roboto" id="ecd"
       style="background-color: rgb(44, 82, 130) ;">
 
       <div class="flex flex-col items-center justify-center w-full md:flex-row-reverse">
         <div class="w-full prose text-white roboto-slab-500">
           <h2 class="text-3xl font-bold font-black text-white uppercase">ECD Inflatables</h2>
           <p>A super-slim "business card" style website, for my father's small business.</p>
-          <p>Completely over-kill with NuxtJS and a Nuxt Framework and Github/Netlify build setup.</p>
+          <p>Completely over-kill with <span class="px-1 text-white bg-black">NuxtJS</span> and a
+            <span class="px-1 text-white bg-black">Github/Netlify</span> build setup.
+          </p>
           <p>
             <a class="inline-block p-4 mt-8 text-blue-900 no-underline uppercase bg-white border border-white border-solid hover:underline"
               href="https://ecdinflatables.com/">View The Site</a>
